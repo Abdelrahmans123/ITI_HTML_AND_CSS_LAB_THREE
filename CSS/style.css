@@ -1,0 +1,261 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: Arial, sans-serif;
+}
+
+body {
+	background-color: #f9f9f9;
+	color: #333;
+	line-height: 1.6;
+}
+
+header {
+	background: linear-gradient(135deg, orange, darkorange);
+	color: white;
+	padding: 30px 20px;
+	display: grid;
+	grid-template-columns: 200px 1fr;
+	align-items: center;
+	gap: 30px;
+	border-radius: 0 0 12px 12px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header img {
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	object-fit: cover;
+	border: 4px solid white;
+}
+
+header .personal_info h1 {
+	font-size: 32px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+header .personal_info p {
+	margin-bottom: 8px;
+	font-size: 16px;
+}
+
+/* Main container */
+.container {
+	width: 80%;
+	margin: 30px auto;
+	display: grid;
+	gap: 40px;
+}
+
+/* Grid sections */
+main,
+.educational_info,
+.skills_WorkExperience {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 30px;
+}
+
+/* Section headings */
+section h2 {
+	margin-bottom: 20px;
+	font-weight: bold;
+	font-size: 24px;
+	background: orange;
+	color: white;
+	padding: 10px 20px;
+	border-radius: 6px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Contact Info */
+.contact_info ul {
+	list-style: none;
+	font-size: 16px;
+}
+
+.contact_info ul li {
+	margin-bottom: 10px;
+}
+
+/* Achievements */
+.achievements .achievements_content {
+	margin-bottom: 20px;
+	padding: 15px;
+	background: #fff;
+	border-radius: 6px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.achievements h3 span {
+	font-weight: bold;
+	color: orange;
+	margin-right: 10px;
+}
+
+/* Languages */
+.language .progress {
+	margin: 15px 0;
+}
+
+.language p {
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+.progress_bar {
+	background: #ddd;
+	border-radius: 20px;
+	overflow: hidden;
+	height: 15px;
+	width: 100%;
+}
+
+.progress_fill {
+	height: 100%;
+	border-radius: 20px;
+}
+
+.orange {
+	background-color: orange;
+}
+.aqua {
+	background-color: aqua;
+}
+.red {
+	background-color: red;
+}
+.width-50 {
+	width: 50%;
+}
+.width-20 {
+	width: 20%;
+}
+.width-90 {
+	width: 90%;
+}
+
+/* Education */
+.education_content {
+	margin-bottom: 20px;
+	padding: 15px;
+	background: #fff;
+	border-left: 4px solid orange;
+	border-radius: 6px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.education_content h3 span {
+	font-weight: bold;
+	color: orange;
+	margin-right: 10px;
+}
+
+/* Skills */
+.skills .skills_content {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+	gap: 20px;
+}
+
+.skills .progress {
+	text-align: center;
+	transition: transform 0.2s;
+}
+
+.skills .progress:hover {
+	transform: scale(1.05);
+}
+
+.skills .progress_pie {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	background: conic-gradient(orange 0% 70%, #ddd 70% 100%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: auto;
+	position: relative;
+	font-weight: bold;
+	color: #333;
+	transition: 0.3s;
+}
+
+.skills .progress_pie::before {
+	content: "";
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	background: #fff;
+	position: absolute;
+}
+
+.skills .progress_pie span {
+	position: relative;
+	font-size: 16px;
+	font-weight: bold;
+	color: #333;
+}
+
+/* Work Experience */
+.work_experience .work_item {
+	margin-bottom: 20px;
+	padding: 15px;
+	background: #fff;
+	border-left: 4px solid orange;
+	border-radius: 6px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.work_experience .work_item h3 {
+	margin-bottom: 8px;
+	font-size: 18px;
+	color: orange;
+}
+
+.work_experience .work_item span {
+	font-size: 14px;
+	color: #777;
+	display: block;
+	margin-bottom: 10px;
+}
+
+/* Online Info */
+.onlineInfo ul {
+	list-style: none;
+	font-size: 16px;
+}
+
+.onlineInfo ul li {
+	margin-bottom: 10px;
+}
+
+.onlineInfo a {
+	text-decoration: none;
+	color: orange;
+	font-weight: bold;
+}
+
+.onlineInfo a:hover {
+	text-decoration: underline;
+}
+
+/* Responsive Layout */
+@media (max-width: 900px) {
+	main,
+	.educational_info,
+	.skills_WorkExperience {
+		grid-template-columns: 1fr;
+	}
+	header {
+		grid-template-columns: 1fr;
+		text-align: center;
+	}
+	header img {
+		margin: auto;
+	}
+}
